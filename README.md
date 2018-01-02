@@ -17,3 +17,11 @@
 1. 打开127.0.0.1:8888
 2. 输入身高、体重
 3. 点击“Submit”
+
+# 构建
+1. 构建可执行jar包
+
+        mvn clean package
+2. 构建docker镜像
+
+        mvn clean package -Pdocker

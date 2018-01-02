@@ -11,6 +11,7 @@
     <modules>
         <module>calculator</module>
         <module>webapp</module>
+        <module>dockerbuildconfig</module>
     </modules>
 
     <dependencyManagement>
@@ -31,4 +32,32 @@
             <artifactId>hibernate-validator</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.commonjava.maven.plugins</groupId>
+                    <artifactId>directory-maven-plugin</artifactId>
+                    <version>0.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>io.fabric8</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>0.20.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.github.odavid.maven.plugins</groupId>
+                    <artifactId>mixin-maven-plugin</artifactId>
+                    <version>0.1-alpha-39</version>
+                    <extensions>true</extensions>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>1.4.5.RELEASE</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
