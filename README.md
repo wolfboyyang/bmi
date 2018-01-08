@@ -21,13 +21,13 @@
 # 构建
 1. 构建可执行jar包
 
-        mvn clean package
+        mvn clean package -Pdocker -Ddocker.skip=true
 2. 构建docker镜像
 
         mvn clean package -Pdocker
 3. 构建华为云版本的jar包
 
-        mvn clean package -PHuaweiCloud
+        mvn clean package -PHuaweiCloud -Pdocker -Ddocker.skip=true
 4. 构建华为云版本的镜像
  
         mvn clean package -PHuaweiCloud -Pdocker
